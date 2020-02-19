@@ -26,7 +26,7 @@ class CloudObjectStore:
         self.COS_ENDPOINT = endpoint
         self.COS_AUTH_ENDPOINT = auth_endpoint
 
-        self.cos = ibm_boto3.client("s3",
+        self.cos = ibm_boto3.resource("s3",
                                       ibm_api_key_id=self.COS_API_KEY_ID,
                                       ibm_service_instance_id=self.COS_RESOURCE_CRN,
                                       ibm_auth_endpoint=self.COS_AUTH_ENDPOINT,
